@@ -1,3 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
+
 body {
     margin: 0;
-} 
+    margin: 0;
+    font-family: 'Smythe', cursive;
+    font-size: 24px;
+}
+
+header {
+    background-image: url('images/bg.png');
+    background-color: #78350F;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 20vh;
+    color: white;
+}
+
+.hero-items {
+    padding-top: 1rem;
+    padding-left: 2.5rem;
+}
+
+.hero-items p {
+    font-size: 30px;
+}
+
+.menu {
+    padding: 1rem 3rem;
+}
+
+.menu-item {
+    border-bottom: 1px solid;
+    display: flex;
+    padding: 1rem .5rem;
+    column-gap: .6rem;
+}
