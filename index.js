@@ -3,18 +3,24 @@ let orderlist = []
 
 
 document.addEventListener('click', function (e) {
+    // console.log(e.target.id)
     if (e.target.dataset.add) {
         addOrder(e.target.dataset.add);
     } else if (e.target.dataset.remove) {
         removeOrder(e.target.dataset.remove)
     } else if (e.target.id == 'complete-order-btn') {
         completeOrder()
+    } else if (e.target.id == 'pay-btn') {
+        pay(e)
+    } else if (e.target.id == "") {
+        document.getElementById('payment-modal').classList.remove('show')
     }
 })
 
 function addOrder(id) {
     const orderItem = menuArray.filter((menuItem) => menuItem.id == id)[0]
     orderlist.push(orderItem);
+    document.getElementById('order-summary').classList.add('show')
     renderOrder()
 
 }
@@ -23,14 +29,26 @@ function removeOrder(id) {
     orderlist.forEach((order) => {
         if (order.id == id) {
             orderlist.splice(order, 1)
-            console.log("item removed")
         }
     })
     renderOrder();
 }
 
 function completeOrder() {
-    console.log('complete order!!')
+    document.getElementById('payment-modal').classList.add('show')
+}
+
+function pay(e) {
+    e.preventDefault();
+    document.getElementById('payment-modal').classList.remove('show')
+    const orderSummaryHtml = document.getElementById('order-summary')
+    const paymentForm = document.getElementById('payment-modal')
+
+    const paymentData = new FormData(paymentForm)
+    orderSummaryHtml.innerHTML = `<p>Thanks, ${paymentData.get('name')}! Your is on its way !</p>`
+    orderSummaryHtml.style.background = '#ECFDF5'
+    orderSummaryHtml.style.color = '#065F46'
+    orderSummaryHtml.style.padding = '1rem'
 }
 
 function getOrderHtml() {
