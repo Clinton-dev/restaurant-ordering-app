@@ -122,6 +122,7 @@ button.remove-item {
     margin: auto;
     width: 85%;
     padding: 1rem;
+    box-shadow: 5px 13px 89px #757575;
 }
 
 .payment-modal h3 {
