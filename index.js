@@ -2,12 +2,13 @@ import { menuArray } from './data.js';
 let orderlist = []
 
 
-// Target add to order button
 document.addEventListener('click', function (e) {
     if (e.target.dataset.add) {
         addOrder(e.target.dataset.add);
     } else if (e.target.dataset.remove) {
         removeOrder(e.target.dataset.remove)
+    } else if (e.target.id == 'complete-order-btn') {
+        completeOrder()
     }
 })
 
@@ -25,12 +26,16 @@ function removeOrder(id) {
             console.log("item removed")
         }
     })
-    console.log(orderlist)
     renderOrder();
+}
+
+function completeOrder() {
+    console.log('complete order!!')
 }
 
 function getOrderHtml() {
     let orderItemHtml = ``
+
     orderlist.forEach((order) => {
         orderItemHtml += `
         <div class="order-item">

@@ -5,6 +5,7 @@ body {
     margin: 0;
     font-family: 'Smythe', cursive;
     font-size: 24px;
+    overflow: hidden;
 }
 
 header {
@@ -64,6 +65,7 @@ i {
 }
 
 .order-summary {
+    /* display: none; */
     width: 85%;
     margin: 10% auto;
 }
@@ -80,6 +82,7 @@ i {
     color: white;
     width: 100%;
 }
+
 
 .order-item {
     display: flex;
@@ -101,4 +104,42 @@ button.remove-item {
 
 .total {
     border-top: 1px solid;
+}
+
+.hidden {
+    display: none;
+}
+
+.payment-modal {
+    background-color: white;
+    border: 1px solid white;
+    height: 50vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 85%;
+    padding: 1rem;
+}
+
+.payment-modal h3 {
+    text-align: center;
+}
+
+.payment-modal input[type="text"] {
+    width: 100%;
+    margin-bottom: .5rem;
+    border-radius: .2rem;
+    border: 1px solid #757575;
+}
+
+.payment-modal button {
+    background-color: #16DB99;
+    border-radius: .5rem;
+    padding: 1rem;
+    border: none;
+    color: white;
+    width: 100%;
 }
