@@ -30,8 +30,34 @@ header {
 }
 
 .menu-item {
-    border-bottom: 1px solid;
+    margin-top: .8rem;
+    border-bottom: 1px solid #D2D2D2;
     display: flex;
+    flex-wrap: wrap;
     padding: 1rem .5rem;
     column-gap: .6rem;
+}
+
+.menu-item-details {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    /* width: auto; */
+}
+
+.ingredients {
+    color: #D2D2D2;
+}
+
+.add-item-btn {
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+i {
+    font-size: 30px;
 }
