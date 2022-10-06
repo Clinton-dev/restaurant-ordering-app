@@ -42,6 +42,14 @@ function getOrderHtml() {
         </div>
         `
     })
+    orderItemHtml += `
+    <div class="order-item total">
+        <div class="class-order-item-details">
+            <h5>Total price: </h5>
+        </div>
+        <p>$ ${orderlist.reduce((total, curr) => total + curr.price, 0)}</p>
+    </div>
+    `
 
     return orderItemHtml;
 }
