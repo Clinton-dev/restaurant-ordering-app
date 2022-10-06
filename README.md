@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [twimba url](https://spectacular-centaur-79512a.netlify.app/)
+- Live Site URL: [restaurant url](https://restaurant-ordering-r6yn0aipi-clinton-dev.vercel.app/)
 
 ## My process
 
